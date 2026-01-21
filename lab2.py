@@ -9,19 +9,19 @@ for _ in range(n):
 
 A = np.array(A, dtype=float)
 
-# Initialize L and U
-L = np.zeros((n, n))
+
+L = np.zeros((n, n)) #initiLISING L and U matrix
 U = np.zeros((n, n))
 
 for i in range(n):
     L[i, i] = 1
 
-    # Compute U
+    
     for j in range(i, n):
-        U[i, j] = A[i, j] - sum(L[i, k] * U[k, j] for k in range(i))
+        U[i, j] = A[i, j] - sum(L[i, k] * U[k, j] for k in range(i)) # computing u
 
     if U[i, i] == 0:
-        print("Zero pivot encountered. LU decomposition not possible.")
+        print("Zero pivot!!!") # fails
         exit()
 
     # Compute L
@@ -34,5 +34,4 @@ print(L)
 print("\nU matrix:")
 print(U)
 
-# Verify A = L @ U
-print("\nCheck A == L @ U :", np.allclose(A, L @ U))
+print("\nChecking conditions: A = LU", np.allclose(A, L @ U))
