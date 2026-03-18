@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def steepest_descent(A, b, x0, max_iter=20, tol=1e-8):
+def steepest_descent(A, b, x0, max_iter, tol):
     
     x = x0.astype(float)
     path = [x.copy()]   #store iteration points
@@ -33,16 +33,17 @@ def steepest_descent(A, b, x0, max_iter=20, tol=1e-8):
 
 
 
-A = np.array([[3,1],
-              [1,2]], dtype=float)
+A = np.array(eval(input("enter matrix A (e.g. [[3,1],[1,2]]): ")), dtype=float)
+b = np.array(eval(input("enter vector b (e.g. [1,2]): ")), dtype=float)
+x0 = np.array(eval(input("enter initial guess x0(format: [0,0]): ")), dtype=float)
 
-b = np.array([1,2], dtype=float)
+max_iter = int(input("enter max iterations: "))
+tol = float(input("enter the value for tolerance: "))
 
-x0 = np.array([0.0,0.0])
 
-solution, points = steepest_descent(A, b, x0)
+solution, points = steepest_descent(A, b, x0,max_iter,tol)
 
-print("\nApproximate solution:", solution)
+print("\napproximate solution:", solution)
 
 
 
