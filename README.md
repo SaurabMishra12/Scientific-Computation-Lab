@@ -24,31 +24,31 @@ From the repository root:
 
 ### 1) Gaussian elimination (lab_1.py)
 ```bash
-python lab_1.py
+python3 lab_1.py
 ```
 Provide the number of rows and columns, then enter each row space-separated. The script performs Gaussian elimination with pivoting and prints the resulting row‑echelon form.
 
 ### 2) LU decomposition (lab2.py)
 ```bash
-python lab2.py
+python3 lab2.py
 ```
 Enter `n` followed by `n` rows of the matrix. The program outputs the `L` and `U` factors and checks that `A = L @ U`.
 
 ### 3) SVD from user input (lab3_svd.py)
 ```bash
-python lab3_svd.py
+python3 lab3_svd.py
 ```
 Enter the matrix dimensions and rows. The script computes `U`, `Σ`, and `Vᵀ` via the eigen-decomposition of `AᵀA`.
 
 ### 4) SVD demo (svd_lab4.py)
 ```bash
-python svd_lab4.py
+python3 svd_lab4.py
 ```
 Uses the hardcoded matrix in the script and prints the rounded diagonalized form for reference.
 
 ### 5) Steepest descent with visualization (lab5_steepest_descent.py)
 ```bash
-python lab5_steepest_descent.py
+python3 lab5_steepest_descent.py
 ```
 Provide `A`, `b`, an initial guess `x0`, maximum iterations, and tolerance. The script prints each iterate and plots the iteration path alongside the true solution.
 
@@ -56,4 +56,4 @@ Provide `A`, `b`, an initial guess `x0`, maximum iterations, and tolerance. The 
 
 ## Tips
 - Inputs are expected to be numeric and space-separated. Invalid shapes will raise errors in the SVD and LU labs.
-- For reproducibility, capture the console input/output when submitting assignments.
+- For reproducibility, capture the console input/output.
